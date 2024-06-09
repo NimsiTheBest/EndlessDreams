@@ -1,0 +1,141 @@
+type: legs
+name: CreeperS
+description: "The Model2 version of the Spiroct. It's faster, and is basically a walking armory."
+health: 1300
+armor: 5
+# leg stuff
+hovering: true
+legCount: 6
+legGroupSize: 3
+legSpeed: 1.6
+legMoveSpace: 1.3
+legLength: 22
+segments: 3
+stepShake: 0.7
+legPairOffset: 2
+fogRadius: 29
+speed: 0.8
+hitSize: 12
+weapons: [
+  {
+    name: creeper-flame
+    x: 6
+    y: -5
+    rotate: false
+    mirror: true
+    reload: 8
+    shootSound: flame
+    shootCone: 45
+    inaccuracy: 17
+    bullet: {
+      damage: 3
+      shootEffect: none
+      speed: 6
+      pierce: true
+      pierceBuilding: true
+      ammoMultiplier: 5
+      status: sapped
+      statusDuration: 60
+      makeFire: true
+      lifetime: 18
+      despawnEffect: none
+      width: 0.01
+      height: 0.01
+      hittable: false
+      smokeEffect: {
+        type: ParticleEffect
+          particles: 25
+          length: 140
+          lifetime: 36
+          interp: circleOut
+          cone: 3
+          colorFrom: 8270c0
+          colorTo: 4e4277
+          sizeFrom: 4
+          sizeTo: 0.6
+        }
+     }
+  }
+  {
+    name: creeper-missiles
+    mirror: true
+    rotate: true
+    shootY: 1
+    shake: 7.5
+    x: 6
+    y: 6
+    velocityRnd: 0.45
+    inaccuracy: 8.5
+    reload: 240
+    recoil: 2
+    shootSound: missile
+    shoot: {
+        shotDelay: 24
+        shots: 3
+    }
+    bullet: {
+        type: MissileBulletType
+        collidesGround: true
+        collidesTiles: false
+        keepVelocity: false
+        collidesAir: false
+        despawnShake: 7.5
+        shrinkX: 0.25
+        shrinkY: 0.5
+        drag: -0.003
+        height: 11
+        width: 11
+        splashDamageRadius: 26
+        lightningLength: 5
+        lightningDamage: 9
+        homingPower: 0.11
+        splashDamage: 45
+        homingRange: 32
+        lightning: 3
+        lifetime: 80
+        damage: 32
+        speed: 2.5
+        despawnEffect: blastExplosion
+        hitEffect: blastExplosion
+        lightningColor: ffffff
+        trailColor: bf92f9
+        trailInterval: 12
+        lightColor: bf92f9
+	    lightOpacity: 0.7
+	    lightRadius: 23.5
+	    frontColor: ffffff
+	    backColor: bf92f9
+        }
+    }
+    {
+    name: creeper-sap-weapon
+    rotate: false
+    recoil: 2
+    shootY: 4
+    x: 5
+    y: -9
+    mirror: true
+    reload: 15
+    ejectEffect: none
+    shootSound: sap
+    bullet: {
+        type: SapBulletType
+        knockback: -1.24
+        length: 90
+        width: 0.55
+        buildingDamageMultiplier: 0.45
+        sapStrength: 1.7
+        lifetime: 35
+        damage: 29
+        shootEffect: shootSmall
+        despawnEffect: none
+        hitColor: bf92f9
+        color: bf92f9
+        hitColor: bf92f9
+        color: bf92f9
+        lightColor: bf92f9
+        lightOpacity: 0.7
+        lightRadius: 18
+        }
+    }
+]

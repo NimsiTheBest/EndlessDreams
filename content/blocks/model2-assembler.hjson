@@ -1,0 +1,37 @@
+type: Reconstructor
+name: Model2 Assembler
+description: Upgrades units into their Model2 counterparts. Not reversible.
+squareSprite: false
+category: units
+size: 5
+health: 2800
+armor: 5
+consumes: {
+  power: 15,
+  items: [
+    { item: metaglass, amount: 150 },
+    { item: silicon, amount: 600 },
+    { item: thorium, amount: 200 },
+    { item: titanium, amount: 360 }
+  ]
+}
+requirements: [
+  metaglass/150,
+  silicon/600,
+  thorium/200,
+  titanium/360
+]
+upgrades: [
+  [dagger, prowler],
+  [fortress, guard],
+  [poly, engi],
+  [spiroct, creeper]
+]
+consumes: {
+  power: 8,
+  items: [
+    { item: graphite, amount: 170 },
+    { item: metaglass, amount: 80 },
+    { item: thorium, amount: 100 }
+  ]
+}

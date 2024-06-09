@@ -1,0 +1,64 @@
+  type: mech
+  description: "The Model2 version of the Dagger. Faster and with longer range."
+  name: ProwlerD
+  outlineColor: 2d2f39
+  lowAltitude: true
+  canBoost: false
+  flying: false
+  hitSize: 7.5
+  rotateSpeed: 14.5
+  fogRadius: 34.5
+  stepShake: 0.25
+  fallSpeed: 0.8
+  health: 210
+  speed: 0.9
+  armor: 4
+  lightColor: feb380
+  lightOpacity: 0.7
+  lightRadius: 48
+  effect: {
+    type: ParticleEffect
+    particles: 8
+    line: true
+    cone: 45
+    baseRotation: 180
+    baseLength: 4
+    length: 3.2
+    colorFrom: feb380
+    strokeFrom: 1.6
+    colorTo: ea8878
+    strokeTo: 1
+  }
+  weapons: [
+    {
+      name: "prowler-weapon"
+      top: false
+      x: 4
+      y: 0.5
+      reload: 30
+      ejectEffect: casing1
+      shootSound: bang1
+      shoot: {
+        shotDelay: 6
+        shots: 3
+      }
+      bullet: {
+        type: BasicBulletType
+        collideTerrain: true
+        height: 14
+        width: 6
+        homingRange: 32
+        lifetime: 92.5
+        damage: 25
+        speed: 2.8
+        frontColor: feb380
+        backColor: ea8878
+        lightColor: feb380
+        lightOpacity: 0.7
+        lightRadius: 21.5
+        trailColor: ea8878
+        trailLength: 21.5
+        trailWidth: 0.5
+      }
+    }
+  ]

@@ -1,0 +1,9 @@
+name: "random-contents"
+displayName: "Random Contents"
+author: Nimsi
+description: "Adds random stuff."
+version: "1.0"
+minGameVersion: "146"
+dependencies: ["multi-crafter"]
+hidden: false
+main: MultiCrafterAdapter

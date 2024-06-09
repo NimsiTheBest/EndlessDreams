@@ -1,0 +1,98 @@
+{
+  type: mech
+  description: "The Model2 version of the Fortress. It has more armor and a shield."
+  name: GuardianF
+  outlineColor: 2d2f39
+  flying: false
+  stepShake: 4.8
+  fogRadius: 50
+  hitSize: 14
+  itemCapacity: 180
+  rotateSpeed: 7.5
+  health: 5000
+  speed: 0.45
+  armor: 15
+  lightColor: feb380
+  lightOpacity: 0.7
+  lightRadius: 90
+  immunities: [ "blasted", "burning", "wet" ]
+  abilities: [
+    {
+      type: ForceFieldAbility
+      regen: 2.5
+      max: 2500
+      cooldown: 1500
+    }
+  ]
+  activeEffect: {
+    type: "ExplosionEffect"
+    lifetime: 90
+    waveColor: "515151"
+    waveStroke: 7.5
+    waveRad: 32.5
+    smokeColor: "515151"
+    smokeSizeBase: 0
+    smokeSize: 0
+    smokes: 0
+    sparkColor: "515151"
+    sparkStroke: 0
+    sparkRad: 0
+    sparkLen: 0
+    sparks: 0
+  }
+  weapons: [
+    {
+      name: "guard-rocket"
+      shootCone: 30
+      recoil: 4.5
+      shake: 1
+      top: false
+      x: 9.5
+      y: 1
+      inaccuracy: 5
+      reload: 75
+      shoot: {
+        type: ShootAlternate
+        shotDelay: 9
+        barrels: 2
+        spread: 4
+        shots: 4
+      }
+      bullet: {
+        type: BasicBulletType
+        sprite: missile-large
+        collideTerrain: true
+        collidesAir: false
+        despawnShake: 7.5
+        hitShake: 7.5
+        shrinkX: 0.25
+        shrinkY: 0.5
+        recoil: 0.18
+        hitSize: 4
+        height: 10
+        width: 6
+        splashDamageRadius: 26
+        statusDuration: 300
+        splashDamage: 30
+        status: "blasted"
+        knockback: 4
+        weaveScale: 5
+        lifetime: 122
+        pierceCap: 2
+        weaveMag: 2
+        damage: 45
+        speed: 3.2
+        hitEffect: blastExplosion
+        hitSound: rocket-boom
+        trailColor: "feb380"
+        trailLength: 21.5
+        trailWidth: 1.5
+        lightColor: "feb380"
+        lightOpacity: 0.7
+        lightRadius: 60
+        frontColor: feb380
+        backColor: ea8878
+      }
+    }
+  ]
+}

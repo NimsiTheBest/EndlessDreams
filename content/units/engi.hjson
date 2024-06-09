@@ -1,0 +1,73 @@
+{
+  localizedName: EngineerP
+  description: "The Model2 version of the Poly. It has faster build speed and point defense."
+  type: flying
+  health: 600
+  speed: 2.2
+  flying: true
+  buildSpeed: 550
+  abilities: [
+    {
+      type: RepairFieldAbility
+    }
+    {
+      type: ForceFieldAbility
+      regen: 1
+      max: 500
+      cooldown: 600
+      radius: 25
+    }
+  ]
+  commands: [
+    move,
+    rebuild,
+    assist,
+  ]
+  weapons: [
+    {
+      name: engi-point
+      type: PointDefenseWeapon
+      x: 4
+      y: -7
+      reload: 10
+      targetInterval: 9
+      targetSwitchInterval: 4
+      recoil: 1
+      bullet: {
+        maxRange: 150
+        damage: 72
+      }
+    }
+    {
+      name: engi-weapon
+      top: false
+      x: 4
+      y: 0.5
+      reload: 30
+      ejectEffect: casing1
+      shootSound: bang1
+      shoot: {
+        shotDelay: 6
+        shots: 2
+      }
+      bullet: {
+        type: BasicBulletType
+        collideTerrain: true
+        height: 14
+        width: 6
+        lifetime: 92.5
+        damage: 5
+        speed: 2.8
+        frontColor: 80b3fe
+        backColor: 7a88ea
+        lightColor: 80b3fe
+        lightOpacity: 0.7
+        lightRadius: 21.5
+        trailColor: 7888ea
+        trailLength: 21.5
+        trailWidth: 0.5
+        status: shocked
+      }
+    }
+  ]
+}
